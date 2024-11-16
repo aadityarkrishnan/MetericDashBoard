@@ -1,3 +1,11 @@
+To run FE
+
+cd fe
+
+npm install
+npm run dev
+
+
 Frontend
 cd frontend
 // For NEXT JS
