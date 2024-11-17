@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 def publish_metrics():
     retry_attempts = 5  # Number of retry attempts
-    retry_delay = 70  # Delay between retries in seconds
+    retry_delay = 10  # Delay between retries in seconds
     attempt = 0
 
     while attempt < retry_attempts:
@@ -52,7 +52,7 @@ def publish_metrics():
                     )
                 )
                 logger.debug(f"Published metrics: {metrics}")
-                time.sleep(100)
+                time.sleep(10)
 
         except pika.exceptions.AMQPConnectionError as e:
             attempt += 1
